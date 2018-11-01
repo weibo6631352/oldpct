@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{bf942a4c-8133-4ef6-b68f-3bc1e400b54c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{f89755b3-e571-47f2-8269-e8bd07d8cab0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{c1e297f7-fd0c-4ffb-bd54-8951bc90001e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cloud.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="commandQueue.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cutCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="deleteCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pasteCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="select1DTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="select2DTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="selection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="selectionTransformTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="statistics.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="statisticsDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="trackball.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="transformCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="denoiseCommand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="denoiseParameterForm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="copyBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cloudEditorWidget.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="cloudTransformTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_cloudEditorWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_statisticsDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_denoiseParameterForm.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cloud.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cloudTransformTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="command.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commandQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="cutCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="deleteCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="localTypes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pasteCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="select1DTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="select2DTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="selection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="selectionTransformTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="statistics.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="toolInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="trackball.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="transformCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="denoiseCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="copyCommand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="copyBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="cloudEditorWidget.h">
+      <Filter>头文件</Filter>
+    </CustomBuild>
+    <CustomBuild Include="denoiseParameterForm.h">
+      <Filter>头文件</Filter>
+    </CustomBuild>
+    <CustomBuild Include="statisticsDialog.h">
+      <Filter>头文件</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
