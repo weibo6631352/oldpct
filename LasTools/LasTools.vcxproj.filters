@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="arithmeticdecoder.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmeticencoder.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="arithmeticmodel.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamin.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamin_array.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamin_file.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamin_istream.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreaminout.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreaminout_file.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamout.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamout_array.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamout_file.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamout_nil.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytestreamout_ostream.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="integercompressor.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasattributer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasdefinitions.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasfilter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasindex.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasinterval.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laspoint.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasquadtree.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasquantizer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_asc.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_bil.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_bin.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_dtm.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_las.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_qfit.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_shp.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreader_txt.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaderbuffered.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreadermerged.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaderpipeon.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaditem.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaditemcompressed_v1.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaditemcompressed_v2.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaditemcompressed_v3.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaditemcompressed_v4.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreaditemraw.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasreadpoint.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lastransform.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasunzipper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="lasutility.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswaveform13reader.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswaveform13writer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriteitem.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriteitemcompressed_v1.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriteitemcompressed_v2.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriteitemcompressed_v3.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriteitemcompressed_v4.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriteitemraw.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswritepoint.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriter.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriter_bin.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriter_las.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriter_qfit.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriter_txt.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswriter_wrl.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laswritercompatible.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laszip.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laszip_common_v1.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laszip_common_v2.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laszip_common_v3.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laszip_decompress_selective_v3.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="laszipper.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mydefs.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="arithmeticdecoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmeticencoder.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="arithmeticmodel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fopen_compressed.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="integercompressor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasfilter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasindex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasinterval.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasquadtree.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_asc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_bil.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_bin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_dtm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_las.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_qfit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_shp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreader_txt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreaderbuffered.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreadermerged.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreaderpipeon.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreaditemcompressed_v1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreaditemcompressed_v2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreaditemcompressed_v3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreaditemcompressed_v4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasreadpoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lastransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasunzipper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lasutility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswaveform13reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswaveform13writer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriteitemcompressed_v1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriteitemcompressed_v2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriteitemcompressed_v3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriteitemcompressed_v4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswritepoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriter_bin.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriter_las.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriter_qfit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriter_txt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswriter_wrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laswritercompatible.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laszip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="laszipper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
