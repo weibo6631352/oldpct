@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/Resources">
+        <file>Resources/open.png</file>
+        <file>Resources/modeling.png</file>
+        <file>Resources/export.png</file>
+        <file>Resources/writelas.png</file>
+        <file>Resources/simple.png</file>
+        <file>Resources/click.png</file>
+        <file>Resources/copy.png</file>
+        <file>Resources/cube.png</file>
+        <file>Resources/cut.png</file>
+        <file>Resources/delete.png</file>
+        <file>Resources/info.png</file>
+        <file>Resources/invert.png</file>
+        <file>Resources/move.png</file>
+        <file>Resources/paste.png</file>
+        <file>Resources/pceditor.icns</file>
+        <file>Resources/save.png</file>
+        <file>Resources/select.png</file>
+        <file>Resources/undo.png</file>
+        <file>Resources/view.png</file>
+    </qresource>
+</RCC>

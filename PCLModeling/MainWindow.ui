@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>电力线检测</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainWindow.qrc">
+    <normaloff>:/Resources/Resources/pceditor.icns</normaloff>:/Resources/Resources/pceditor.icns</iconset>
+  </property>
+  <widget class="QRendView" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+   <widget class="QMenu" name="menuf">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="open"/>
+    <addaction name="write"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>滤波</string>
+    </property>
+    <widget class="QMenu" name="menu_z">
+     <property name="title">
+      <string>直通</string>
+     </property>
+     <addaction name="zhitongXYZ"/>
+    </widget>
+    <addaction name="simplify"/>
+    <addaction name="mls_simple"/>
+    <addaction name="separator"/>
+    <addaction name="menu_z"/>
+    <addaction name="liqundian"/>
+    <addaction name="dimian"/>
+    <addaction name="xyPlane"/>
+    <addaction name="heightColor"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>聚类</string>
+    </property>
+    <addaction name="quyuzengzhangColor"/>
+    <addaction name="quyuzengzhangNormal"/>
+    <addaction name="oushifenge"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>分割</string>
+    </property>
+    <addaction name="ranSaC"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>识别</string>
+    </property>
+    <addaction name="powerline"/>
+    <addaction name="qAligningObjectTemplates"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="about"/>
+    <addaction name="editerhelp"/>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>特征</string>
+    </property>
+    <addaction name="FPFH"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="offset_center"/>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>建模</string>
+    </property>
+    <addaction name="build_trian_model"/>
+   </widget>
+   <addaction name="menuf"/>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_7"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_8"/>
+   <addaction name="menu_6"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="open"/>
+   <addaction name="write"/>
+   <addaction name="separator"/>
+   <addaction name="powerline"/>
+  </widget>
+  <action name="open">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/Resources/Resources/open.png</normaloff>:/Resources/Resources/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="modeling">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/Resources/Resources/modeling.png</normaloff>:/Resources/Resources/modeling.png</iconset>
+   </property>
+   <property name="text">
+    <string>建模</string>
+   </property>
+   <property name="toolTip">
+    <string>建模</string>
+   </property>
+  </action>
+  <action name="write">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/Resources/Resources/save.png</normaloff>:/Resources/Resources/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>另存为</string>
+   </property>
+   <property name="toolTip">
+    <string>另存为</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="zhitongXYZ">
+   <property name="text">
+    <string>xyz过滤</string>
+   </property>
+  </action>
+  <action name="liqundian">
+   <property name="text">
+    <string>离群点</string>
+   </property>
+  </action>
+  <action name="lccp">
+   <property name="text">
+    <string>lccp（基于凹凸性，不适用）</string>
+   </property>
+  </action>
+  <action name="cpc">
+   <property name="text">
+    <string>cpc（基于凹凸性，不适用）</string>
+   </property>
+  </action>
+  <action name="shuangbianlvbo">
+   <property name="text">
+    <string>双边滤波</string>
+   </property>
+   <property name="toolTip">
+    <string>双边滤波</string>
+   </property>
+  </action>
+  <action name="dimian">
+   <property name="text">
+    <string>提取地面</string>
+   </property>
+  </action>
+  <action name="ranSaC">
+   <property name="text">
+    <string>图元提取</string>
+   </property>
+   <property name="toolTip">
+    <string>RanSaC几何形状</string>
+   </property>
+  </action>
+  <action name="quyuzengzhangNormal">
+   <property name="text">
+    <string>区域增长Normal</string>
+   </property>
+  </action>
+  <action name="quyuzengzhangColor">
+   <property name="text">
+    <string>区域增长Color</string>
+   </property>
+  </action>
+  <action name="oushifenge">
+   <property name="text">
+    <string>欧式聚类</string>
+   </property>
+  </action>
+  <action name="chaotijulei">
+   <property name="text">
+    <string>超体聚类（不适用）</string>
+   </property>
+  </action>
+  <action name="powerline">
+   <property name="text">
+    <string>电力线</string>
+   </property>
+  </action>
+  <action name="simplify">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/Resources/Resources/simple.png</normaloff>:/Resources/Resources/simple.png</iconset>
+   </property>
+   <property name="text">
+    <string>点云简化(octree)</string>
+   </property>
+  </action>
+  <action name="about">
+   <property name="text">
+    <string>关于</string>
+   </property>
+  </action>
+  <action name="editerhelp">
+   <property name="text">
+    <string>编辑帮助</string>
+   </property>
+  </action>
+  <action name="FPFH">
+   <property name="text">
+    <string>PFH/FPFH</string>
+   </property>
+  </action>
+  <action name="qAligningObjectTemplates">
+   <property name="text">
+    <string>将对象模板对齐到点云</string>
+   </property>
+  </action>
+  <action name="VFH_6DOF">
+   <property name="text">
+    <string>基于VFH特征聚类识别和6DOF姿态估计</string>
+   </property>
+  </action>
+  <action name="CorrespondenceGrouping3D">
+   <property name="text">
+    <string>基于对应分组的3D对象识别</string>
+   </property>
+  </action>
+  <action name="xyPlane">
+   <property name="text">
+    <string>投影到xy平面</string>
+   </property>
+  </action>
+  <action name="heightColor">
+   <property name="text">
+    <string>高程颜色</string>
+   </property>
+  </action>
+  <action name="aobao">
+   <property name="text">
+    <string>凸包建模</string>
+   </property>
+  </action>
+  <action name="offset_center">
+   <property name="text">
+    <string>向中心点偏移</string>
+   </property>
+   <property name="toolTip">
+    <string>向中心点偏移，防止坐标过大</string>
+   </property>
+  </action>
+  <action name="build_trian_model">
+   <property name="text">
+    <string>生成三角网模型</string>
+   </property>
+   <property name="toolTip">
+    <string>生成三角网模型</string>
+   </property>
+  </action>
+  <action name="mls_simple">
+   <property name="text">
+    <string>最小二乘平滑</string>
+   </property>
+   <property name="toolTip">
+    <string>最小二乘平滑</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QRendView</class>
+   <extends>QWidget</extends>
+   <header>QRendView.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

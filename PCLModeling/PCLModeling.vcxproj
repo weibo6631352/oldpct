@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWithDebug|x64">
+      <Configuration>ReleaseWithDebug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OPENCV)\include;$(ProjectDir)\lastool\inc;$(PCL_ROOT)\3rdParty\OpenNI2\Include;$(PCL_ROOT)\include\pcl-1.8;$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0;$(PCL_ROOT)\3rdParty\QHull\include;C:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost;$(PCL_ROOT)\3rdParty\Eigen\eigen3;$(BOOST_ROOT);$(PCL_ROOT)\3rdParty\FLANN\include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtOpenGL;$(ProjectDir)%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(OPENCV)\x64\vc12\lib;$(PCL_ROOT)\3rdParty\OpenNI2\Lib;$(PCL_ROOT)\3rdParty\VTK\lib;$(PCL_ROOT)\3rdParty\Qhull\lib;$(PCL_ROOT)\3rdParty\FLANN\lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib;$(PCL_ROOT)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>pcl_apps_debug.lib;pcl_common_debug.lib;pcl_features_debug.lib;pcl_filters_debug.lib;pcl_io_ply_debug.lib;pcl_io_debug.lib;pcl_kdtree_debug.lib;pcl_keypoints_debug.lib;pcl_ml_debug.lib;pcl_octree_debug.lib;pcl_outofcore_debug.lib;pcl_people_debug.lib;pcl_recognition_debug.lib;pcl_registration_debug.lib;pcl_sample_consensus_debug.lib;pcl_search_debug.lib;pcl_segmentation_debug.lib;pcl_simulation_debug.lib;pcl_stereo_debug.lib;pcl_surface_debug.lib;pcl_tracking_debug.lib;pcl_visualization_debug.lib;libboost_atomic-vc120-mt-gd-1_59.lib;libboost_chrono-vc120-mt-gd-1_59.lib;libboost_container-vc120-mt-gd-1_59.lib;libboost_context-vc120-mt-gd-1_59.lib;libboost_coroutine-vc120-mt-gd-1_59.lib;libboost_date_time-vc120-mt-gd-1_59.lib;libboost_exception-vc120-mt-gd-1_59.lib;libboost_filesystem-vc120-mt-gd-1_59.lib;libboost_graph-vc120-mt-gd-1_59.lib;libboost_iostreams-vc120-mt-gd-1_59.lib;libboost_locale-vc120-mt-gd-1_59.lib;libboost_log-vc120-mt-gd-1_59.lib;libboost_log_setup-vc120-mt-gd-1_59.lib;libboost_math_c99-vc120-mt-gd-1_59.lib;libboost_math_c99f-vc120-mt-gd-1_59.lib;libboost_math_c99l-vc120-mt-gd-1_59.lib;libboost_math_tr1-vc120-mt-gd-1_59.lib;libboost_math_tr1f-vc120-mt-gd-1_59.lib;libboost_math_tr1l-vc120-mt-gd-1_59.lib;libboost_mpi-vc120-mt-gd-1_59.lib;libboost_prg_exec_monitor-vc120-mt-gd-1_59.lib;libboost_program_options-vc120-mt-gd-1_59.lib;libboost_random-vc120-mt-gd-1_59.lib;libboost_regex-vc120-mt-gd-1_59.lib;libboost_serialization-vc120-mt-gd-1_59.lib;libboost_signals-vc120-mt-gd-1_59.lib;libboost_system-vc120-mt-gd-1_59.lib;libboost_test_exec_monitor-vc120-mt-gd-1_59.lib;libboost_thread-vc120-mt-gd-1_59.lib;libboost_timer-vc120-mt-gd-1_59.lib;libboost_unit_test_framework-vc120-mt-gd-1_59.lib;libboost_wave-vc120-mt-gd-1_59.lib;libboost_wserialization-vc120-mt-gd-1_59.lib;flann-gd.lib;flann_cpp_s-gd.lib;flann_s-gd.lib;qhull-gd.lib;qhullcpp-gd.lib;qhullstatic-gd.lib;qhullstatic_r-gd.lib;qhull_p-gd.lib;qhull_r-gd.lib;vtkalglib-7.0-gd.lib;vtkChartsCore-7.0-gd.lib;vtkCommonColor-7.0-gd.lib;vtkCommonComputationalGeometry-7.0-gd.lib;vtkCommonCore-7.0-gd.lib;vtkCommonDataModel-7.0-gd.lib;vtkCommonExecutionModel-7.0-gd.lib;vtkCommonMath-7.0-gd.lib;vtkCommonMisc-7.0-gd.lib;vtkCommonSystem-7.0-gd.lib;vtkCommonTransforms-7.0-gd.lib;vtkDICOMParser-7.0-gd.lib;vtkDomainsChemistry-7.0-gd.lib;vtkDomainsChemistryOpenGL2-7.0-gd.lib;vtkexoIIc-7.0-gd.lib;vtkexpat-7.0-gd.lib;vtkFiltersAMR-7.0-gd.lib;vtkFiltersCore-7.0-gd.lib;vtkFiltersExtraction-7.0-gd.lib;vtkFiltersFlowPaths-7.0-gd.lib;vtkFiltersGeneral-7.0-gd.lib;vtkFiltersGeneric-7.0-gd.lib;vtkFiltersGeometry-7.0-gd.lib;vtkFiltersHybrid-7.0-gd.lib;vtkFiltersHyperTree-7.0-gd.lib;vtkFiltersImaging-7.0-gd.lib;vtkFiltersModeling-7.0-gd.lib;vtkFiltersParallel-7.0-gd.lib;vtkFiltersParallelImaging-7.0-gd.lib;vtkFiltersProgrammable-7.0-gd.lib;vtkFiltersSelection-7.0-gd.lib;vtkFiltersSMP-7.0-gd.lib;vtkFiltersSources-7.0-gd.lib;vtkFiltersStatistics-7.0-gd.lib;vtkFiltersTexture-7.0-gd.lib;vtkFiltersVerdict-7.0-gd.lib;vtkfreetype-7.0-gd.lib;vtkGeovisCore-7.0-gd.lib;vtkglew-7.0-gd.lib;vtkGUISupportQt-7.0-gd.lib;vtkGUISupportQtSQL-7.0-gd.lib;vtkhdf5-7.0-gd.lib;vtkhdf5_hl-7.0-gd.lib;vtkImagingColor-7.0-gd.lib;vtkImagingCore-7.0-gd.lib;vtkImagingFourier-7.0-gd.lib;vtkImagingGeneral-7.0-gd.lib;vtkImagingHybrid-7.0-gd.lib;vtkImagingMath-7.0-gd.lib;vtkImagingMorphological-7.0-gd.lib;vtkImagingSources-7.0-gd.lib;vtkImagingStatistics-7.0-gd.lib;vtkImagingStencil-7.0-gd.lib;vtkInfovisCore-7.0-gd.lib;vtkInfovisLayout-7.0-gd.lib;vtkInteractionImage-7.0-gd.lib;vtkInteractionStyle-7.0-gd.lib;vtkInteractionWidgets-7.0-gd.lib;vtkIOAMR-7.0-gd.lib;vtkIOCore-7.0-gd.lib;vtkIOEnSight-7.0-gd.lib;vtkIOExodus-7.0-gd.lib;vtkIOExport-7.0-gd.lib;vtkIOGeometry-7.0-gd.lib;vtkIOImage-7.0-gd.lib;vtkIOImport-7.0-gd.lib;vtkIOInfovis-7.0-gd.lib;vtkIOLegacy-7.0-gd.lib;vtkIOLSDyna-7.0-gd.lib;vtkIOMINC-7.0-gd.lib;vtkIOMovie-7.0-gd.lib;vtkIONetCDF-7.0-gd.lib;vtkIOParallel-7.0-gd.lib;vtkIOParallelXML-7.0-gd.lib;vtkIOPLY-7.0-gd.lib;vtkIOSQL-7.0-gd.lib;vtkIOVideo-7.0-gd.lib;vtkIOXML-7.0-gd.lib;vtkIOXMLParser-7.0-gd.lib;vtkjpeg-7.0-gd.lib;vtkjsoncpp-7.0-gd.lib;vtklibxml2-7.0-gd.lib;vtkmetaio-7.0-gd.lib;vtkNetCDF-7.0-gd.lib;vtkNetCDF_cxx-7.0-gd.lib;vtkoggtheora-7.0-gd.lib;vtkParallelCore-7.0-gd.lib;vtkpng-7.0-gd.lib;vtkproj4-7.0-gd.lib;vtkRenderingAnnotation-7.0-gd.lib;vtkRenderingContext2D-7.0-gd.lib;vtkRenderingContextOpenGL2-7.0-gd.lib;vtkRenderingCore-7.0-gd.lib;vtkRenderingFreeType-7.0-gd.lib;vtkRenderingImage-7.0-gd.lib;vtkRenderingLabel-7.0-gd.lib;vtkRenderingLOD-7.0-gd.lib;vtkRenderingOpenGL2-7.0-gd.lib;vtkRenderingQt-7.0-gd.lib;vtkRenderingVolume-7.0-gd.lib;vtkRenderingVolumeOpenGL2-7.0-gd.lib;vtksqlite-7.0-gd.lib;vtksys-7.0-gd.lib;vtktiff-7.0-gd.lib;vtkverdict-7.0-gd.lib;vtkViewsContext2D-7.0-gd.lib;vtkViewsCore-7.0-gd.lib;vtkViewsInfovis-7.0-gd.lib;vtkViewsQt-7.0-gd.lib;vtkzlib-7.0-gd.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;opencv_calib3d2413.lib;opencv_contrib2413.lib;opencv_core2413.lib;opencv_features2d2413.lib;opencv_flann2413.lib;opencv_gpu2413.lib;opencv_highgui2413.lib;opencv_imgproc2413.lib;opencv_legacy2413.lib;opencv_ml2413.lib;opencv_nonfree2413.lib;opencv_objdetect2413.lib;opencv_ocl2413.lib;opencv_photo2413.lib;opencv_stitching2413.lib;opencv_superres2413.lib;opencv_ts2413.lib;opencv_video2413.lib;opencv_videostab2413.lib;Qt5OpenGLd.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;QT_OPENGL_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\..\Dependence\opengl;$(SolutionDir)\..\Dependence\boost_1_67_0;$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8;$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1;$(SolutionDir)\..\Dependence\qhull-2015.2\include;$(SolutionDir)\..\Dependence\flann\include\flann;$(SolutionDir)\..\Dependence\Eigen\include\eigen3;$(SolutionDir)\..\Dependence\flann\include\flann\util;$(SolutionDir)\..\Dependence\flann\include;.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtOpenGL;$(SolutionDir)\LasTools;$(SolutionDir)\MathGeoLib;$(SolutionDir)\Editor;$(SolutionDir)\..\Dependence\cgal\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <RuntimeTypeInfo>
+      </RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <Optimization>MaxSpeed</Optimization>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\Dependence\opengl;$(SolutionDir)\..\Dependence\VTK-8.1.1\lib;$(SolutionDir)\..\Dependence\qhull-2015.2\lib;$(SolutionDir)\..\Dependence\flann\lib;$(SolutionDir)\..\Dependence\boost_1_67_0\lib64-msvc-12.0;$(SolutionDir)\..\Dependence\pcl-1.8.1\lib;$(SolutionDir)\..\Dependence\cgal\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>pcl_common_release.lib;pcl_features_release.lib;pcl_filters_release.lib;pcl_io_ply_release.lib;pcl_io_release.lib;pcl_kdtree_release.lib;pcl_keypoints_release.lib;pcl_ml_release.lib;pcl_octree_release.lib;pcl_people_release.lib;pcl_recognition_release.lib;pcl_registration_release.lib;pcl_sample_consensus_release.lib;pcl_search_release.lib;pcl_segmentation_release.lib;pcl_stereo_release.lib;pcl_surface_release.lib;pcl_tracking_release.lib;pcl_visualization_release.lib;vtkalglib-8.1.lib;vtkChartsCore-8.1.lib;vtkCommonColor-8.1.lib;vtkCommonComputationalGeometry-8.1.lib;vtkCommonCore-8.1.lib;vtkCommonDataModel-8.1.lib;vtkCommonExecutionModel-8.1.lib;vtkCommonMath-8.1.lib;vtkCommonMisc-8.1.lib;vtkCommonSystem-8.1.lib;vtkCommonTransforms-8.1.lib;vtkDICOMParser-8.1.lib;vtkDomainsChemistry-8.1.lib;vtkDomainsChemistryOpenGL2-8.1.lib;vtkexoIIc-8.1.lib;vtkexpat-8.1.lib;vtkFiltersAMR-8.1.lib;vtkFiltersCore-8.1.lib;vtkFiltersExtraction-8.1.lib;vtkFiltersFlowPaths-8.1.lib;vtkFiltersGeneral-8.1.lib;vtkFiltersGeneric-8.1.lib;vtkFiltersGeometry-8.1.lib;vtkFiltersHybrid-8.1.lib;vtkFiltersHyperTree-8.1.lib;vtkFiltersImaging-8.1.lib;vtkFiltersModeling-8.1.lib;vtkFiltersParallel-8.1.lib;vtkFiltersParallelImaging-8.1.lib;vtkFiltersPoints-8.1.lib;vtkFiltersProgrammable-8.1.lib;vtkFiltersSelection-8.1.lib;vtkFiltersSMP-8.1.lib;vtkFiltersSources-8.1.lib;vtkFiltersStatistics-8.1.lib;vtkFiltersTexture-8.1.lib;vtkFiltersTopology-8.1.lib;vtkFiltersVerdict-8.1.lib;vtkfreetype-8.1.lib;vtkGeovisCore-8.1.lib;vtkgl2ps-8.1.lib;vtkglew-8.1.lib;vtkGUISupportQt-8.1.lib;vtkGUISupportQtSQL-8.1.lib;vtkhdf5-8.1.lib;vtkhdf5_hl-8.1.lib;vtkImagingColor-8.1.lib;vtkImagingCore-8.1.lib;vtkImagingFourier-8.1.lib;vtkImagingGeneral-8.1.lib;vtkImagingHybrid-8.1.lib;vtkImagingMath-8.1.lib;vtkImagingMorphological-8.1.lib;vtkImagingSources-8.1.lib;vtkImagingStatistics-8.1.lib;vtkImagingStencil-8.1.lib;vtkInfovisCore-8.1.lib;vtkInfovisLayout-8.1.lib;vtkInteractionImage-8.1.lib;vtkInteractionStyle-8.1.lib;vtkInteractionWidgets-8.1.lib;vtkIOAMR-8.1.lib;vtkIOCore-8.1.lib;vtkIOEnSight-8.1.lib;vtkIOExodus-8.1.lib;vtkIOExport-8.1.lib;vtkIOExportOpenGL2-8.1.lib;vtkIOGeometry-8.1.lib;vtkIOImage-8.1.lib;vtkIOImport-8.1.lib;vtkIOInfovis-8.1.lib;vtkIOLegacy-8.1.lib;vtkIOLSDyna-8.1.lib;vtkIOMINC-8.1.lib;vtkIOMovie-8.1.lib;vtkIONetCDF-8.1.lib;vtkIOParallel-8.1.lib;vtkIOParallelXML-8.1.lib;vtkIOPLY-8.1.lib;vtkIOSQL-8.1.lib;vtkIOTecplotTable-8.1.lib;vtkIOVideo-8.1.lib;vtkIOXML-8.1.lib;vtkIOXMLParser-8.1.lib;vtkjpeg-8.1.lib;vtkjsoncpp-8.1.lib;vtklibharu-8.1.lib;vtklibxml2-8.1.lib;vtklz4-8.1.lib;vtkmetaio-8.1.lib;vtkNetCDF-8.1.lib;vtknetcdfcpp-8.1.lib;vtkoggtheora-8.1.lib;vtkParallelCore-8.1.lib;vtkpng-8.1.lib;vtkproj4-8.1.lib;vtkRenderingAnnotation-8.1.lib;vtkRenderingContext2D-8.1.lib;vtkRenderingContextOpenGL2-8.1.lib;vtkRenderingCore-8.1.lib;vtkRenderingFreeType-8.1.lib;vtkRenderingGL2PSOpenGL2-8.1.lib;vtkRenderingImage-8.1.lib;vtkRenderingLabel-8.1.lib;vtkRenderingLOD-8.1.lib;vtkRenderingOpenGL2-8.1.lib;vtkRenderingQt-8.1.lib;vtkRenderingVolume-8.1.lib;vtkRenderingVolumeOpenGL2-8.1.lib;vtksqlite-8.1.lib;vtksys-8.1.lib;vtktiff-8.1.lib;vtkverdict-8.1.lib;vtkViewsContext2D-8.1.lib;vtkViewsCore-8.1.lib;vtkViewsGeovis-8.1.lib;vtkViewsInfovis-8.1.lib;vtkViewsQt-8.1.lib;vtkzlib-8.1.lib;flann_cpp_s.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CloudEditorWidgetEx.cpp" />
+    <ClCompile Include="ConvexBudding.cpp" />
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QAligningObjectTemplates.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QBilateralFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QChaotiJulei.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCorrespondenceGrouping.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QCpc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QFPFHFeature.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QGround.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QLccp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QLiqundian.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QModding.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QOushifenge.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QPowerLineClassification.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QQuyuzengzhangColor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QQuyuzengzhangNormal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QRanSac.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QRendView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QResampling.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QSimplify.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QSubDialogBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QVFHTraining.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QZhiTongXYZ.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_MainWindow.cpp" />
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QAligningObjectTemplates.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QBilateralFilter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QChaotiJulei.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QCorrespondenceGrouping.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QCpc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QFPFHFeature.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QGround.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QLccp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QLiqundian.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QModding.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QOushifenge.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QPowerLineClassification.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QQuyuzengzhangColor.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QQuyuzengzhangNormal.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QRanSac.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QRendView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QResampling.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QSimplify.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QSubDialogBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QVFHTraining.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\ReleaseWithDebug\moc_QZhiTongXYZ.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QAligningObjectTemplates.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QBilateralFilter.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QChaotiJulei.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QCorrespondenceGrouping.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QCpc.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QFPFHFeature.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QGround.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QLccp.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QLiqundian.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QModding.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QOushifenge.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QPowerLineClassification.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QQuyuzengzhangColor.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QQuyuzengzhangNormal.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QRanSac.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QRendView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QResampling.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QSimplify.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QSubDialogBase.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QVFHTraining.cpp" />
+    <ClCompile Include="GeneratedFiles\Release\moc_QZhiTongXYZ.cpp" />
+    <ClCompile Include="kdtree.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="PCManage.cpp" />
+    <ClCompile Include="PointHeightColor.cpp" />
+    <ClCompile Include="ProjectionXyPlane.cpp" />
+    <ClCompile Include="PublicFuncs.cpp" />
+    <ClCompile Include="QAligningObjectTemplates.cpp" />
+    <ClCompile Include="QBilateralFilter.cpp" />
+    <ClCompile Include="QChaotiJulei.cpp" />
+    <ClCompile Include="QCorrespondenceGrouping.cpp" />
+    <ClCompile Include="QCpc.cpp" />
+    <ClCompile Include="QFPFHFeature.cpp" />
+    <ClCompile Include="QGround.cpp" />
+    <ClCompile Include="QLccp.cpp" />
+    <ClCompile Include="QLiqundian.cpp" />
+    <ClCompile Include="QModding.cpp" />
+    <ClCompile Include="QOushifenge.cpp" />
+    <ClCompile Include="QPowerLineClassification.cpp" />
+    <ClCompile Include="QQuyuzengzhangColor.cpp" />
+    <ClCompile Include="QQuyuzengzhangNormal.cpp" />
+    <ClCompile Include="QRanSac.cpp" />
+    <ClCompile Include="QRendView.cpp" />
+    <ClCompile Include="QResampling.cpp" />
+    <ClCompile Include="QSimplify.cpp" />
+    <ClCompile Include="QSubDialogBase.cpp" />
+    <ClCompile Include="QVFHTraining.cpp" />
+    <ClCompile Include="QZhiTongXYZ.cpp" />
+    <ClCompile Include="Reconstruct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainWindow.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainWindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing MainWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing MainWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing MainWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <ClInclude Include="CloudEditorWidgetEx.h" />
+    <ClInclude Include="ConvexBudding.h" />
+    <ClInclude Include="dbscan.h" />
+    <ClInclude Include="dvprint.h" />
+    <CustomBuild Include="QFPFHFeature.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QFPFHFeature.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QFPFHFeature.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QFPFHFeature.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QAligningObjectTemplates.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QAligningObjectTemplates.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QAligningObjectTemplates.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QAligningObjectTemplates.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QVFHTraining.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QVFHTraining.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QVFHTraining.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QVFHTraining.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QCorrespondenceGrouping.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QCorrespondenceGrouping.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QCorrespondenceGrouping.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QCorrespondenceGrouping.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_MainWindow.h" />
+    <ClInclude Include="GeneratedFiles\ui_QAligningObjectTemplates.h" />
+    <ClInclude Include="GeneratedFiles\ui_QBilateralFilter.h" />
+    <ClInclude Include="GeneratedFiles\ui_QChaotiJulei.h" />
+    <ClInclude Include="GeneratedFiles\ui_QCorrespondenceGrouping.h" />
+    <ClInclude Include="GeneratedFiles\ui_QCpc.h" />
+    <ClInclude Include="GeneratedFiles\ui_QFPFHFeature.h" />
+    <ClInclude Include="GeneratedFiles\ui_QGround.h" />
+    <ClInclude Include="GeneratedFiles\ui_QLccp.h" />
+    <ClInclude Include="GeneratedFiles\ui_QLiqundian.h" />
+    <ClInclude Include="GeneratedFiles\ui_QModding.h" />
+    <ClInclude Include="GeneratedFiles\ui_QOushifenge.h" />
+    <ClInclude Include="GeneratedFiles\ui_QPowerLineClassification.h" />
+    <ClInclude Include="GeneratedFiles\ui_QQuyuzengzhangColor.h" />
+    <ClInclude Include="GeneratedFiles\ui_QQuyuzengzhangNormal.h" />
+    <ClInclude Include="GeneratedFiles\ui_QRanSac.h" />
+    <ClInclude Include="GeneratedFiles\ui_QResampling.h" />
+    <ClInclude Include="GeneratedFiles\ui_QSimplify.h" />
+    <ClInclude Include="GeneratedFiles\ui_QSubDialogBase.h" />
+    <ClInclude Include="GeneratedFiles\ui_QVFHTraining.h" />
+    <ClInclude Include="GeneratedFiles\ui_QZhiTongXYZ.h" />
+    <ClInclude Include="kdtree.h" />
+    <ClInclude Include="LeastSquare.h" />
+    <ClInclude Include="PointHeightColor.h" />
+    <ClInclude Include="ProjectionXyPlane.h" />
+    <ClInclude Include="PublicFuncs.h" />
+    <CustomBuild Include="QResampling.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QResampling.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QResampling.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QResampling.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <ClInclude Include="Reconstruct.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="PCManage.h" />
+    <CustomBuild Include="QSimplify.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QSimplify.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QSimplify.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QSimplify.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QPowerLineClassification.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QPowerLineClassification.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QPowerLineClassification.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QPowerLineClassification.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QModding.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QModding.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QModding.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QModding.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QChaotiJulei.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QChaotiJulei.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QChaotiJulei.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QChaotiJulei.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QOushifenge.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QOushifenge.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QOushifenge.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QOushifenge.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QQuyuzengzhangColor.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QQuyuzengzhangColor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QQuyuzengzhangColor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QQuyuzengzhangColor.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QQuyuzengzhangNormal.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QQuyuzengzhangNormal.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QQuyuzengzhangNormal.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QQuyuzengzhangNormal.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QRanSac.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QRanSac.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QRanSac.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QRanSac.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QCpc.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QCpc.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QCpc.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QCpc.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QLccp.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QLccp.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QLccp.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QLccp.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QGround.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QGround.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QGround.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QGround.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QBilateralFilter.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QBilateralFilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QBilateralFilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QBilateralFilter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QLiqundian.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QLiqundian.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QLiqundian.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QLiqundian.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QSubDialogBase.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QSubDialogBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QSubDialogBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QSubDialogBase.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QZhiTongXYZ.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QZhiTongXYZ.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QZhiTongXYZ.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QZhiTongXYZ.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+    <CustomBuild Include="QRendView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QRendView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(OPENCV)\include" "-I$(ProjectDir)\lastool\inc" "-I$(PCL_ROOT)\3rdParty\OpenNI2\Include" "-I$(PCL_ROOT)\include\pcl-1.8" "-I$(PCL_ROOT)\3rdParty\VTK\include\vtk-7.0" "-I$(PCL_ROOT)\3rdParty\QHull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_59\boost" "-I$(PCL_ROOT)\3rdParty\Eigen\eigen3" "-I$(BOOST_ROOT)\." "-I$(PCL_ROOT)\3rdParty\FLANN\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(ProjectDir)%(AdditionalIncludeDirectories)\." "-I$(NOINHERIT)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QRendView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DQT_OPENGL_LIB -D_MBCS  "-I$(SolutionDir)\..\Dependence\opengl" "-I$(SolutionDir)\..\Dependence\boost_1_67_0" "-I$(SolutionDir)\..\Dependence\pcl-1.8.1\include\pcl-1.8" "-I$(SolutionDir)\..\Dependence\VTK-8.1.1\include\vtk-8.1" "-I$(SolutionDir)\..\Dependence\qhull-2015.2\include" "-I$(SolutionDir)\..\Dependence\flann\include\flann" "-I$(SolutionDir)\..\Dependence\Eigen\include\eigen3" "-I$(SolutionDir)\..\Dependence\flann\include\flann\util" "-I$(SolutionDir)\..\Dependence\flann\include" "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtOpenGL" "-I$(SolutionDir)\LasTools" "-I$(SolutionDir)\MathGeoLib" "-I$(SolutionDir)\Editor" "-I$(SolutionDir)\..\Dependence\cgal\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Moc%27ing QRendView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"   "-I.\GeneratedFiles"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QZhiTongXYZ.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QSubDialogBase.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QLiqundian.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QBilateralFilter.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QGround.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QLccp.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QCpc.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QRanSac.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QQuyuzengzhangNormal.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QQuyuzengzhangColor.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QOushifenge.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QChaotiJulei.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QModding.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QPowerLineClassification.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QSimplify.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="MainWindow.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);.\Resources\open.png;.\Resources\modeling.png;.\Resources\export.png;.\Resources\writelas.png;.\Resources\simple.png;.\Resources\click.png;.\Resources\copy.png;.\Resources\cube.png;.\Resources\cut.png;.\Resources\delete.png;.\Resources\info.png;.\Resources\invert.png;.\Resources\move.png;.\Resources\paste.png;.\Resources\pceditor.icns;.\Resources\save.png;.\Resources\select.png;.\Resources\undo.png;.\Resources\view.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);.\Resources\open.png;.\Resources\modeling.png;.\Resources\export.png;.\Resources\writelas.png;.\Resources\simple.png;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QFPFHFeature.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QAligningObjectTemplates.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QVFHTraining.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QCorrespondenceGrouping.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Editor\Editor.vcxproj">
+      <Project>{9b35cf12-d7cc-4ebe-8df8-efdf1adb047a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\LasTools\LasTools.vcxproj">
+      <Project>{182842c4-c175-4441-9116-0a0b0f3acec6}</Project>
+      <Private>false</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <ProjectReference Include="..\MathGeoLib\MathGeoLib.vcxproj">
+      <Project>{3776f544-75b3-4d06-9351-2d0b92d5db6f}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QResampling.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWithDebug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="vs2013_qt510" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
